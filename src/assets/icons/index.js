@@ -1,6 +1,7 @@
 import edit from './edit.png'
 import check from './check-50.png'
 import cross from './cross-50.png'
+import custom from './custom-50.png'
 import deleteIcon from './delete-48.png'
 import reset from './reset-50.png'
 import rotate from './rotate-50.png'
@@ -13,6 +14,7 @@ import texture from './texture-50.png'
 export {
     check,
     cross,
+    custom,
     deleteIcon,
     edit,
     list,
