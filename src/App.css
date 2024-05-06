@@ -12,36 +12,58 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-.configurator {
+.card {
   position: fixed;
-  right: 24px;
-  top:10%;
+  /* right: 24px; */
+  /* top:1%; */
   /* bottom: 25vh; */
-  width: 360px;
-  padding: 24px;
+  width: auto;
+  padding: 10px 6px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  background-color: #36363650;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  /* gap: 16px; */
+  background-color: #12121250;
   backdrop-filter: blur(10px);
   border-radius: 8px;
+  border: solid 1px #90909090;
 }
 
 
-.configurator__section__title {
+.card__section__title {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
   color: white;
 }
 
-.configurator__section__values {
+.card__section__values  {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 10px;
   align-items: center;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* padding: 16px 0; */
+}
+
+.card__section__values.two {
   flex-wrap: wrap;
-  padding: 16px 0;
+  /* padding: 16px 0; */
+}
+
+.handle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: solid 2px #999999;
+  transition: all 0.4s;
 }
 
 .item {
@@ -49,11 +71,12 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.4s;
+  opacity: 0.7;
 }
 
 .item:hover {
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .item__dot {
