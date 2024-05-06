@@ -10,7 +10,7 @@ export const Card = () => {
 			<Html
 				scale={1}
 				distanceFactor={focusObj.target == "pic" ? 7 : 5}
-				position={[0, 1, 0]}
+				position={[0, 0, 0]}
 			>
 				<div
 					className="handle w-5 h-5 bg-red-600"
@@ -39,7 +39,7 @@ export const Card = () => {
 								<img src={move} alt="moveImg" />
 							</div>
 						</div>
-						<div
+						{focusObj.target !== "pic" && <div
 							className="item"
 							onClick={() => {
 								setMode(focusObj.target + "rot");
@@ -48,8 +48,8 @@ export const Card = () => {
 							<div className="item__dot">
 								<img src={rotate2} alt="rotateImg" />
 							</div>
-						</div>
-						<div className="item ">
+						</div>}
+						{/* <div className="item ">
 							<div className="item__dot">
 								{" "}
 								<img src={texture} alt="textureImg" />
@@ -59,7 +59,7 @@ export const Card = () => {
 							<div className="item__dot">
 								<img src={swap} alt="swapImg" />
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</Html>

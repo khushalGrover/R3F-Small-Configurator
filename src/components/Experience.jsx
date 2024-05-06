@@ -26,7 +26,7 @@ export const Experience = ({ arg }) => {
 				/>
 				<Hall />
 			</Stage>
-			<mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.62, 0]}>
+			{/* <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.62, 0]}>
 				<planeGeometry args={[100, 100]} />
 				<MeshReflectorMaterial
 					blur={[400, 400]}
@@ -40,7 +40,7 @@ export const Experience = ({ arg }) => {
 					color="#101010"
 					matalness={0.5}
 				/>
-			</mesh>
+			</mesh> */}
 		</>
 	);
 };

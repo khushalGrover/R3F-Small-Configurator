@@ -5,7 +5,6 @@ import { InteractionUI } from "./InteractionUI";
 import { Card } from "./Card";
 import { useCustomization } from "../constants/Customization";
 
-
 export function Hall(props) {
 	const { nodes, materials } = useGLTF("./models/sofaSet.gltf");
 	const { focusObj, setFocusObj, mode } = useCustomization();
@@ -16,8 +15,8 @@ export function Hall(props) {
 			<PivotControls
 				visible={true}
 				activeAxes={[true, false, true]}
-				disableSliders={mode === ("tablemove") ? false : true}
-				disableRotations={mode === ("tablerot") ? false : true}
+				disableSliders={mode === "tablemove" ? false : true}
+				disableRotations={mode === "tablerot" ? false : true}
 				disableAxes={true}
 				anchor={[0, 1.1, 0]}
 				rotation={[Math.PI, -Math.PI / 2, 0]}
@@ -25,8 +24,8 @@ export function Hall(props) {
 				castShadow={false}
 			>
 				<group position={[-0.004, 0.222, 0.219]} castShadow={false}>
-					<InteractionUI target="table" />
-					{focusObj.target==="table" && <Card/>}
+					{mode === "view" && <InteractionUI target="table" />}
+					{focusObj.target === "table" && <Card />}
 					<mesh
 						geometry={nodes.Material2183.geometry}
 						material={materials.Pale_lancelot_oak_PBR}
@@ -63,8 +62,8 @@ export function Hall(props) {
 			<PivotControls
 				visible={true}
 				activeAxes={[true, false, true]}
-				disableSliders={mode === ("sofa1move") ? false : true}
-				disableRotations={mode === ("sofa1rot") ? false : true}
+				disableSliders={mode === "sofa1move" ? false : true}
+				disableRotations={mode === "sofa1rot" ? false : true}
 				disableAxes={true}
 				anchor={[0, 1.1, 0]}
 				rotation={[Math.PI, -Math.PI / 2, 0]}
@@ -75,8 +74,8 @@ export function Hall(props) {
 					position={[-0.548, 0.289, -1.039]}
 					rotation={[0, -0.627, 0]}
 				>
-					<InteractionUI target="sofa1" />
-					{focusObj.target==="sofa1" && <Card/>}
+					{mode === "view" &&<InteractionUI target="sofa1" />}
+					{focusObj.target === "sofa1" && <Card />}
 					<mesh
 						geometry={nodes.Material2546.geometry}
 						material={materials.Pale_lancelot_oak_PBR}
@@ -92,9 +91,9 @@ export function Hall(props) {
 			<PivotControls
 				visible={true}
 				activeAxes={[true, false, true]}
-				disableSliders={mode === ("sofa2move") ? false : true}
+				disableSliders={mode === "sofa2move" ? false : true}
 				disableAxes={true}
-				disableRotations={mode === ("sofa2rot") ? false : true}
+				disableRotations={mode === "sofa2rot" ? false : true}
 				anchor={[0, 1.1, 0]}
 				rotation={[Math.PI, -Math.PI / 2, 0]}
 				scale={0.5}
@@ -104,8 +103,8 @@ export function Hall(props) {
 					position={[-0.645, 0.289, 1.385]}
 					rotation={[0, -0.627, 0]}
 				>
-					<InteractionUI target="sofa2"  />
-					{focusObj.target==="sofa2" && <Card/>}
+					{mode === "view" &&<InteractionUI target="sofa2" />}
+					{focusObj.target === "sofa2" && <Card />}
 
 					<mesh
 						geometry={nodes.Material2006.geometry}
@@ -122,10 +121,10 @@ export function Hall(props) {
 			<PivotControls
 				visible={true}
 				activeAxes={[true, false, true]}
-				disableSliders={mode === ("sofa3move") ? false : true}
+				disableSliders={mode === "sofa3move" ? false : true}
 				disableAxes={true}
 				anchor={[0, 1.1, 0]}
-				disableRotations={mode === ("sofa3rot") ? false : true}
+				disableRotations={mode === "sofa3rot" ? false : true}
 				rotation={[Math.PI, -Math.PI / 2, 0]}
 				scale={0.5}
 				castShadow={false}
@@ -134,8 +133,8 @@ export function Hall(props) {
 					position={[0.814, 0.289, 1.279]}
 					rotation={[0, -0.627, 0]}
 				>
-					<InteractionUI target="sofa3" />
-					{focusObj.target==="sofa3" && <Card/>}
+					{mode === "view" &&<InteractionUI target="sofa3" />}
+					{focusObj.target === "sofa3" && <Card />}
 					<mesh
 						geometry={nodes.Material2007.geometry}
 						material={materials.Pale_lancelot_oak_PBR}
@@ -150,10 +149,10 @@ export function Hall(props) {
 			<PivotControls
 				visible={true}
 				activeAxes={[true, false, true]}
-				disableSliders={mode === ("sofa4move") ? false : true}
+				disableSliders={mode === "sofa4move" ? false : true}
 				disableAxes={true}
 				anchor={[0, 1.1, 0]}
-				disableRotations={mode === ("sofa4rot") ? false : true}
+				disableRotations={mode === "sofa4rot" ? false : true}
 				rotation={[Math.PI, -Math.PI / 2, 0]}
 				scale={0.5}
 				castShadow={false}
@@ -162,8 +161,8 @@ export function Hall(props) {
 					position={[0.593, 0.289, -1.039]}
 					rotation={[0, -0.627, 0]}
 				>
-					<InteractionUI target="sofa4" />
-					{focusObj.target==="sofa4" && <Card/>}
+					{mode === "view" && <InteractionUI target="sofa4" />}
+					{focusObj.target === "sofa4" && <Card />}
 					<mesh
 						geometry={nodes.Material2009.geometry}
 						material={materials.Pale_lancelot_oak_PBR}
@@ -178,7 +177,7 @@ export function Hall(props) {
 			<PivotControls
 				visible={true}
 				activeAxes={[true, true, false]}
-				disableSliders={mode === ("picmove") ? false : true}
+				disableSliders={mode === "picmove" ? false : true}
 				disableRotations={true}
 				disableAxes={true}
 				anchor={[0, 1.3, 1.3]}
@@ -186,8 +185,8 @@ export function Hall(props) {
 				scale={0.5}
 			>
 				<group position={[2.76, 1.646, -0.335]}>
-					<InteractionUI target="pic"/>
-					{focusObj.target==="pic" && <Card/>}
+					{mode === "view" && <InteractionUI target="pic" />}
+					{focusObj.target === "pic" && <Card />}
 					<mesh
 						geometry={nodes.Material2026.geometry}
 						material={materials.material}

@@ -12,7 +12,7 @@ After cloning from [https://github.com/khushalGrover/R3F-Small-Configurator], fo
 
 ```bash
 yarn
-yarn add gh-pages --save-dev
+# yarn add gh-pages --save-dev
 yarn dev
 ```
 
