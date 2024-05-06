@@ -43,29 +43,21 @@ export const Experience = ({ arg }) => {
 					matalness={0.5}
 				/>
 			</mesh>
-			<Html scale={1} distanceFactor={4} position={[0.3, 0.3, 0.3]}>
-				<div className="handle w-5 h-5 bg-green-600">
-					<img
-						className="handleIcon--active"
-						src={check}
-						alt="handle Icon"
-					/>
-				</div>
-				<div className="card sub">
-					{/* <h1 className="card__section__title">Table</h1> */}
+			<Html scale={1} distanceFactor={4} position={[0.3, 0.3, 0.4]} >
+				<div className="card subMenu">
 
 					<div className="card__section__values two">
 						<div className="item">
-							<div className="item__label">v1</div>
+							<div className="item__label">option1</div>
 						</div>
 						<div className="item">
-							<div className="item__label">v2</div>
+							<div className="item__label">option2</div>
 						</div>
 						<div className="item ">
-							<div className="item__label">v3</div>
+							<div className="item__label">option3</div>
 						</div>
 						<div className="item">
-							<div className="item__label">v4</div>
+							<div className="item__label">option4</div>
 						</div>
 					</div>
 				</div>
