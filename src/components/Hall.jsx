@@ -37,6 +37,8 @@ export function Hall(props) {
 					/>
 				</group>
 			</PivotControls>
+			
+			{/* TODO change picture source image */}
 			{/* <mesh
 				geometry={nodes["H-Pic-4"].geometry}
 				material={materials.Summer_Evening}
