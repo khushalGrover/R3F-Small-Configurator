@@ -17,15 +17,15 @@ function App() {
 
 	return (
 		<>
-			<div className="flex flex-col md:flex-row h-dvh w-full items-center justify-center relative bg-[#191920]">
+			<div className="flex flex-col md:flex-row h-dvh w-full items-center justify-center relative bg-[#2c2e19]">
 				<div className={"w-full h-full"}>
 					<Canvas
 						shadows
 						camera={{ position: [0, 0, 60], fov: 35 }}
 						className="canvas"
 					>
-						<color attach="background" args={["#191920"]} />
-						<fog attach="fog" args={["#191920", 0, 30]} />
+						<color attach="background" args={["#2c2e19"]} />
+						<fog attach="fog" args={["#303030", 0, 30]} />
 						<Experience />
 					</Canvas>
 					<Loader />
